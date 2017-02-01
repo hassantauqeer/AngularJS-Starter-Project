@@ -1,4 +1,5 @@
-<table class="table">
+<div class="addBtn"><a ui-sref="form"><button id="addBtn" type="button" class="btn btn-primary" id="add">Add</button></a></div>
+<table class="table" ng-controller="showdata">
   <tr class="heading">
     <td><strong>ID</strong></td>
     <td><strong>Booking ID</strong></td>
@@ -6,12 +7,12 @@
     <td><strong>Latitude</strong></td>
     <td><strong>Actions</strong></td>
   </tr>
-  <tr ng-repeat="x in mydata">
-    <td>{{x.id}}</td>   
+  <tr ng-repeat="x in '{{mydata}}' track by $index">
+    <td>{{x.id}}</td>
     <td>{{x.booking_id}}</td>
     <td>{{x.location[0]}}</td>
     <td>{{x.location[1]}}</td>
-    <td><button type="button" class="btn btn-warning">Edit</button>  <button type="button" class="btn btn-danger" ng-click="delete(x)">Remove</button></td>
+    <td><a><button type="button" class="btn btn-warning" ng-click="editData(x)">Edit</button></a>   <button type="button" class="btn btn-danger" ng-click="delete(x)">Remove</button></td>
   </tr>
+  <!--  ui-sref="formedit({id: x.id})"-->
 </table>
-<a ui-sref="form"><button id="addBtn" type="button" class="btn btn-primary" id="add">Add</button></a>

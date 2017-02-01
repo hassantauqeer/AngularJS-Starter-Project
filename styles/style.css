@@ -8,11 +8,6 @@ tr, td {
 .heading td {
   font-size: 18px;
 }
-#addBtn {
-  padding: 8px 557px;
-  font-size: 18px;
-  margin-bottom: 40px;
-}
 table {
   /*border-top: 5px solid black;*/
 }
@@ -21,4 +16,7 @@ table {
 }
 #submitBtn {
   margin-bottom: 20px;
+}
+.addBtn {
+  float:left;
 }

@@ -1,19 +1,19 @@
-<form>
+<form ng-controller="adddata" ng-style="background: 'none'">
   <div class="form-group">
     <label for="clientId">ID</label>
-    <input type="text" class="form-control" ng-model="user.id" id="clientId" placeholder="ID">
+    <input type="text" class="form-control" ng-model="user.id" {{id}}id="clientId" placeholder="ID">
   </div>
   <div class="form-group">
     <label for="bookingId">Booking Id</label>
-    <input type="text" class="form-control" ng-model="user.bookinid" id="bookingId" placeholder="Booking Id">
+    <input type="text" class="form-control" ng-model="user.booking_id" id="bookingId" placeholder="Booking Id">
   </div>
   <div class="form-group">
     <label for="longitude">Longitude</label>
-    <input type="text" class="form-control" ng-model="user.longitude" id="longitude" placeholder="Longitude">
+    <input type="text" class="form-control" ng-model="user.location[0]" id="longitude" placeholder="Longitude">
   </div>
   <div class="form-group">
     <label for="latitude">Latitude</label>
-    <input type="text" class="form-control" ng-model="user.latitude" id="latitude" placeholder="Latitude">
+    <input type="text" class="form-control" ng-model="user.location[1]" id="latitude" placeholder="Latitude">
   </div>
   <div class="checkbox">
     <label>
