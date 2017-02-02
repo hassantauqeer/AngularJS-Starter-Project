@@ -3,9 +3,7 @@ app.controller('adddata', function($scope, service){
     service.readData()
     .then(function(user) {
       this.mydata = user;
-      // console.log("No Error");
-       console.log(this.mydata);
-      // return user;
+      return user;
   });
   };
 });

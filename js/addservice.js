@@ -1,24 +1,15 @@
 app.service('service', function($http){
+  parent = this;
+
 this.readData = function(){
   return $http({
     method: 'GET',
     url: 'jsons/hassan.json'
   }).then(function (data) {
+    parent.mydata = data.data;
     return data.data;
   });
 };
-var mydata;
-this.giveData = function(){
-  this.readData().then(function(user) {
-    this.mydata = user;
-      // console.log("No Error");
-       console.log(this.mydata);
-      // return user;
-  });
-};
-this.getData = function() {
-  return this.mydata;
-}
 
 });
 

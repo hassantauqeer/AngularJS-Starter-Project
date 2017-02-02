@@ -3,12 +3,12 @@
 <head>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles/style.css">
-  <link rel="stylesheet" href="styles/login-styles.css">
+  <!-- <link rel="stylesheet" href="styles/login-styles.css"> -->
 </head>
 <body ng-controller="myctrl">
   <div class="container" ng-controller="showdata">
     <div><h3>Home Page</h3></div>
-    <div><a ui-sref="table"><button type="button" id="show" class="btn btn-primary" ng-click="showData()">Show Data</button></a></div>
+    <div><a ui-sref="table"><button type="button" id="show" class="btn btn-primary" ng-click="readData()">Show Data</button></a></div>
     <div>
       <ui-view></ui-view>
     </div>
@@ -20,6 +20,6 @@
   <script src="js/myctrl.js"></script>
   <script src="js/showData.js"></script>
   <script src="js/addData.js"></script>
-  <script src="js/login-script.js"></script>
+  <!-- <script src="js/login-script.js"></script> -->
 </body>
 </html>

@@ -7,7 +7,8 @@ var app = angular.module("myModule", ['ui.router']).config(function($stateProvid
   var tablepage = {
     name: 'table',
     url: '/table',
-    templateUrl: 'templates/table.html'
+    templateUrl: 'templates/table.html',
+    controller: 'showdata'
   }
   var formedit = {
     name: 'formedit',
@@ -16,13 +17,13 @@ var app = angular.module("myModule", ['ui.router']).config(function($stateProvid
     controller: function ($scope, $stateParams) {
     }
   }
-  var home = {
-    name: 'home',
-    url: '/',
-    templateUrl: 'templates/login.html'
-  }
+  // var home = {
+  //   name: 'home',
+  //   url: '/',
+  //   templateUrl: 'templates/login.html'
+  // }
   $stateProvider.state(formpage);
-  $stateProvider.state(home);
+  // $stateProvider.state(home);
   $stateProvider.state(formedit);
   $stateProvider.state(tablepage);
 })
